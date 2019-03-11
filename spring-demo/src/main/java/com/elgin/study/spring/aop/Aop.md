@@ -1,12 +1,11 @@
 ## 什么是 AOP ？
 
-***
+
 AOP(Aspect-Oriented Programming)，即面向切面编程, 它与 OOP( Object-Oriented Programming, 面向对象编程) 相辅相成， 提供了与 OOP 不同的抽象软件结构的视角。
-***
-***
+
 * 在 OOP 中，以类( Class )作为基本单元
 * 在 AOP 中，以切面( Aspect )作为基本单元。
-***
+
   
 ## 什么是 Aspect ？
 Aspect 由 PointCut 和 Advice 组成。 <br/>
@@ -61,13 +60,13 @@ JoinPoint 和 PointCut 本质上就是两个不同纬度上的东西。
 * Spring AOP 使用一个 Advice 作为拦截器，在 JoinPoint “周围”维护一系列的拦截器。
 
 #### 有哪些类型的 Advice？
-
+````
 * Before -前置通知 这些类型的 Advice 在 JoinPoint 方法之前执行，并使用 @Before 注解标记进行配置。
 * After Returning -返回通知 这些类型的 Advice 在连接点方法正常执行后执行，并使用 @AfterReturning 注解标记进行配置。
 * After Throwing -异常通知 这些类型的 Advice 仅在 JoinPoint 方法通过抛出异常退出并使用 @AfterThrowing 注解标记配置时执行。
 * After Finally -后置通知 这些类型的 Advice 在连接点方法之后执行，无论方法退出是正常还是异常返回，并使用 @After 注解标记进行配置。
 * Around -环绕通知 这些类型的 Advice 在连接点之前和之后执行，并使用 @Around 注解标记进行配置。
-
+````
 ## 什么是 Target ？
 
 Target ，织入 Advice 的目标对象。目标对象也被称为 Advised Object 。
@@ -90,3 +89,34 @@ Target ，织入 Advice 的目标对象。目标对象也被称为 Advised Objec
 * JDK 动态代理
 * CGLIB
 ````
+那么 Spring 什么时候使用 JDK 动态代理，什么时候使用 CGLIB 呢？
+
+````
+// From 《Spring 源码深度解析》P172
+// Spring AOP 部分使用 JDK 动态代理或者 CGLIB 来为目标对象创建代理。（建议尽量使用 JDK 的动态代理）
+// 如果被代理的目标对象实现了至少一个接口，则会使用 JDK 动态代理。所有该目标类型实现的接口都讲被代理。
+// 若该目标对象没有实现任何接口，则创建一个 CGLIB 代理。
+// 如果你希望强制使用 CGLIB 代理，（例如希望代理目标对象的所有方法，而不只是实现自接口的方法）那也可以。但是需要考虑以下两个方法：
+//      1> 无法通知(advise) Final 方法，因为它们不能被覆盖。
+//      2> 你需要将 CGLIB 二进制发型包放在 classpath 下面。
+// 为什么 Spring 默认使用 JDK 的动态代理呢？笔者猜测原因如下：
+//      1> 使用 JDK 原生支持，减少三方依赖
+//      2> JDK8 开始后，JDK 代理的性能差距 CGLIB 的性能不会太多。可参见：https://www.cnblogs.com/haiq/p/4304615.html
+
+````
+
+<em>Summary：</em>
+
+Spring AOP 中的动态代理主要有两种方式，
+
+* JDK 动态代理
+
+JDK 动态代理通过反射来接收被代理的类，并且要求被代理的类必须实现一个接口。JDK动态代理的核心是 InvocationHandler 接口和 Proxy 类。
+
+* CGLIB 动态代理
+
+如果目标类没有实现接口，那么 Spring AOP 会选择使用 CGLIB 来动态代理目标类。
+
+当然，Spring 也支持配置，强制使用 CGLIB 动态代理。
+
+CGLIB（Code Generation Library），是一个代码生成的类库，可以在运行时动态的生成某个类的子类，注意，CGLIB 是通过继承的方式做的动态代理，因此如果某个类被标记为 final ，那么它是无法使用 CGLIB 做动态代理的。
