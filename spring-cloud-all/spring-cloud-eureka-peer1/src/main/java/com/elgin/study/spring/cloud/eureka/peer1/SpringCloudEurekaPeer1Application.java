@@ -1,0 +1,15 @@
+package com.elgin.study.spring.cloud.eureka.peer1;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+
+@SpringBootApplication
+@EnableEurekaServer
+public class SpringCloudEurekaPeer1Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringCloudEurekaPeer1Application.class, args);
+	}
+
+}
