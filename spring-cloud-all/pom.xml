@@ -11,6 +11,8 @@
     <name>spring-cloud-all</name>
 	<modules>
         <module>spring-cloud-eureka-peer1</module>
+        <module>spring-cloud-eureka-peer2</module>
+        <module>spring-cloud-eureka-client</module>
     </modules>
 
 </project>
