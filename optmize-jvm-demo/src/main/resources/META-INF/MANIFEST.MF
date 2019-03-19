@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Class-Path: spring-boot-starter-logging-2.1.3.RELEASE.jar spring-conte
+ xt-5.1.5.RELEASE.jar slf4j-api-1.7.25.jar spring-boot-starter-tomcat-
+ 2.1.3.RELEASE.jar jackson-annotations-2.9.0.jar spring-core-5.1.5.REL
+ EASE.jar spring-boot-starter-json-2.1.3.RELEASE.jar tomcat-embed-el-9
+ .0.16.jar spring-webmvc-5.1.5.RELEASE.jar logback-core-1.2.3.jar log4
+ j-to-slf4j-2.11.2.jar jboss-logging-3.3.2.Final.jar tomcat-embed-core
+ -9.0.16.jar jackson-module-parameter-names-2.9.8.jar spring-aop-5.1.5
+ .RELEASE.jar tomcat-embed-websocket-9.0.16.jar spring-web-5.1.5.RELEA
+ SE.jar log4j-api-2.11.2.jar jackson-databind-2.9.8.jar spring-beans-5
+ .1.5.RELEASE.jar validation-api-2.0.1.Final.jar jackson-datatype-jsr3
+ 10-2.9.8.jar lombok-1.18.6.jar spring-boot-2.1.3.RELEASE.jar snakeyam
+ l-1.23.jar spring-boot-starter-2.1.3.RELEASE.jar logback-classic-1.2.
+ 3.jar spring-boot-starter-web-2.1.3.RELEASE.jar classmate-1.4.0.jar j
+ ackson-core-2.9.8.jar spring-boot-autoconfigure-2.1.3.RELEASE.jar jac
+ kson-datatype-jdk8-2.9.8.jar hibernate-validator-6.0.14.Final.jar spr
+ ing-jcl-5.1.5.RELEASE.jar jul-to-slf4j-1.7.25.jar spring-expression-5
+ .1.5.RELEASE.jar javax.annotation-api-1.3.2.jar
+Main-Class: com.elgin.optmize.jvm.OptmizeJvmDemoApplication
+
