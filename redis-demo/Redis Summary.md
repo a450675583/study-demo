@@ -195,7 +195,7 @@ Redis Cluster 实现了分布式的支持。<br/>
 
 > * Memcached 将内存分割成特定长度的块来存储数据，以完全解决内存碎片的问题。但是这种方式会使得内存的利用率不高，例如块的大小为 128 bytes，只存储 100 bytes 的数据，那么剩下的 28 bytes 就浪费掉了。
 
-网络上一张对比图：
+网络上一张对比图： <br/>
 ![img](https://camo.githubusercontent.com/f51fdf878ceaedb4c6d6df7d568ca718d2e327f6/687474703a2f2f6d792d626c6f672d746f2d7573652e6f73732d636e2d6265696a696e672e616c6979756e63732e636f6d2f31382d392d32342f36313630333137392e6a7067)
 
 ## 三、Redis过期机制
@@ -480,7 +480,8 @@ Redis集群实现方案：
 
 <br/>
 参考资料：
-----------
+<br/>
+
 [Redisson分布式缓存部分参考博客：https://blog.csdn.net/Coco_Wditm/article/details/84638876](https://blog.csdn.net/Coco_Wditm/article/details/84638876)
 [参考内容：https://github.com/Snailclimb/JavaGuide/blob/master/数据存储/Redis/Redis.md](https://github.com/Snailclimb/JavaGuide/blob/master/数据存储/Redis/Redis.md)
 [参考内容：https://github.com/CyC2018/CS-Notes/blob/master/docs/notes/Redis.md](https://github.com/CyC2018/CS-Notes/blob/master/docs/notes/Redis.md)
