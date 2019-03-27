@@ -11,6 +11,10 @@
     <name>study-demo</name>
 	<modules>
         <module>spring-demo</module>
+        <module>optmize-jvm-demo</module>
+        <module>redis-demo</module>
+        <module>spring-cloud-all</module>
+        <module>algorithm-noob-learning</module>
     </modules>
 
 </project>
