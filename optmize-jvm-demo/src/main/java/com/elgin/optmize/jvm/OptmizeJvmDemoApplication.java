@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.concurrent.locks.ReentrantLock;
 
 @SpringBootApplication
@@ -18,6 +19,8 @@ public class OptmizeJvmDemoApplication {
 	ReentrantLock lock2 = new ReentrantLock();
 
 	public static void main(String[] args) {
+		HashMap<String,Object> map = new HashMap<>(7);
+		map.put("ss","ss");
 		SpringApplication.run(OptmizeJvmDemoApplication.class, args);
 	}
 
