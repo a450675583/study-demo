@@ -52,7 +52,7 @@
 第二种，是第一种的特殊情况。大多数场景下，数据库字段名和实体类中的属性名差，主要是前者为**下划线风格**，后者为**驼峰风格**。在这种情况下，可以直接配置如下，实现自动的下划线转驼峰的功能。
 
 ```xml
-<setting name="logImpl" value="LOG4J"/>
+<settings>
     <setting name="mapUnderscoreToCamelCase" value="true" />
 </settings>
 ```
