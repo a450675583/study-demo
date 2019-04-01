@@ -6,10 +6,25 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="algorithm-noob-learning" />
+        <module name="mybatis-demo" />
+        <module name="optmize-jvm-demo" />
+        <module name="redis-demo" />
+        <module name="spring-cloud-eureka-client" />
+        <module name="spring-cloud-eureka-peer1" />
+        <module name="spring-cloud-eureka-peer2" />
         <module name="spring-demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="algorithm-noob-learning" target="1.7" />
+      <module name="mybatis-demo" target="1.7" />
+      <module name="optmize-jvm-demo" target="1.8" />
+      <module name="redis-demo" target="1.8" />
+      <module name="spring-cloud-all" target="1.5" />
+      <module name="spring-cloud-eureka-client" target="1.8" />
+      <module name="spring-cloud-eureka-peer1" target="1.8" />
+      <module name="spring-cloud-eureka-peer2" target="1.8" />
       <module name="spring-demo" target="1.8" />
       <module name="study-demo" target="1.5" />
     </bytecodeTargetLevel>
