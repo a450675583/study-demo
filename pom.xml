@@ -15,6 +15,7 @@
         <module>redis-demo</module>
         <module>spring-cloud-all</module>
         <module>algorithm-noob-learning</module>
+        <module>design-patterns-all</module>
     </modules>
 
 </project>
