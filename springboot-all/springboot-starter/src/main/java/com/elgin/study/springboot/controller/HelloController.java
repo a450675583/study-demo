@@ -11,4 +11,10 @@ public class HelloController{
         return "Hello World!";
     }
 
+
+    @RequestMapping("/exceptionTest")
+    String exception() {
+        throw new RuntimeException("exception test");
+    }
+
 }
