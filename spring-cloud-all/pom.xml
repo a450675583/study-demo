@@ -13,6 +13,7 @@
         <module>spring-cloud-eureka-peer1</module>
         <module>spring-cloud-eureka-peer2</module>
         <module>spring-cloud-eureka-client-provider-01</module>
+        <module>spring-cloud-eureka-client-provider-02</module>
     </modules>
 
 </project>

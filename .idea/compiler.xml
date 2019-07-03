@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="redis-demo" />
+        <module name="optmize-jvm-demo" />
+        <module name="spring-cloud-eureka-peer2" />
+        <module name="spring-cloud-eureka-peer1" />
+        <module name="spring-cloud-eureka-client-provider-01 (1)" />
+        <module name="spring-cloud-eureka-client-provider-01" />
+        <module name="spring-demo" />
+        <module name="design-patterns" />
+        <module name="algorithm-noob-learning" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="algorithm-noob-learning" target="1.8" />
+      <module name="design-patterns" target="1.8" />
+      <module name="optmize-jvm-demo" target="1.8" />
+      <module name="redis-demo" target="1.8" />
+      <module name="spring-cloud-all" target="1.5" />
+      <module name="spring-cloud-eureka-client" target="1.8" />
+      <module name="spring-cloud-eureka-client-provider" target="1.8" />
+      <module name="spring-cloud-eureka-client-provider-01" target="1.8" />
+      <module name="spring-cloud-eureka-client-provider-01 (1)" target="1.8" />
+      <module name="spring-cloud-eureka-peer1" target="1.8" />
+      <module name="spring-cloud-eureka-peer2" target="1.8" />
+      <module name="spring-demo" target="1.8" />
+      <module name="stydy-demo" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="optmize-jvm-demo" options="-parameters" />
+      <module name="redis-demo" options="-parameters" />
+      <module name="spring-cloud-eureka-client" options="-parameters" />
+      <module name="spring-cloud-eureka-client-provider" options="-parameters" />
+      <module name="spring-cloud-eureka-client-provider-01" options="-parameters" />
+      <module name="spring-cloud-eureka-client-provider-01 (1)" options="-parameters" />
+      <module name="spring-cloud-eureka-peer1" options="-parameters" />
+      <module name="spring-cloud-eureka-peer2" options="-parameters" />
+      <module name="spring-demo" options="-parameters" />
+    </option>
+  </component>
+</project>
