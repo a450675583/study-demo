@@ -1,5 +1,6 @@
 package com.elgin.study.spring.cloud.eureka.client;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -16,14 +17,17 @@ public class SpringCloudEurekaClientApplication {
         SpringApplication.run(SpringCloudEurekaClientApplication.class, args);
     }
 
+    @Value("${server.port}")
+    private String port;
+
     @RequestMapping("/home")
     public String home(){
-        return  "Hello World !";
+        return  "Hello World ! " + "|| port = " + port ;
     }
 
     @RequestMapping("/hi")
     public String hi(@RequestParam("name") String name){
-        return  "Hello " + name;
+        return  "Hello " + name + " || port= " + port;
     }
 
 }
