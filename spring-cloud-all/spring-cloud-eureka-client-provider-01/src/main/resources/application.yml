@@ -7,4 +7,4 @@ server:
 
 spring:
   application:
-    name: client-provider-01
+    name: client-provider

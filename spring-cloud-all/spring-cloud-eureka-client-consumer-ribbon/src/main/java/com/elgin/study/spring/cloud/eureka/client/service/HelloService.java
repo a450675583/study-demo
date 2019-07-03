@@ -12,12 +12,12 @@ public class HelloService {
 
 
     public String home(){
-        return restTemplate.getForObject("http://CLIENT-PROVIDER-01/home",String.class);
+        return restTemplate.getForObject("http://CLIENT-PROVIDER/home",String.class);
     }
 
 
     public String hi(String name){
-        return restTemplate.getForObject("http://CLIENT-PROVIDER-01/hi?name=" + name,String.class);
+        return restTemplate.getForObject("http://CLIENT-PROVIDER/hi?name=" + name,String.class);
     }
 
 
