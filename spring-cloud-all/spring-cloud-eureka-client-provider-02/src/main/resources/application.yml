@@ -3,8 +3,8 @@ eureka:
     serviceUrl:
       defaultZone: http://peer1:1111/eureka/,http://peer2:2222/eureka/
 server:
-  port: 8070
+  port: 8071
 
 spring:
   application:
-    name: client-provider
+    name: client-provider-02
