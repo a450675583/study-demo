@@ -1,4 +1,4 @@
-package com.elgin.study.spring.cloud.eureka.peer1;
+package com.elgin.study.spring.cloud.eureka.peer2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
