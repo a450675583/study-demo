@@ -1,0 +1,11 @@
+server:
+  port: 8073
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:1111/eureka/,http://peer2:2222/eureka/
+
+spring:
+  application:
+    name: client-consumer-feign
