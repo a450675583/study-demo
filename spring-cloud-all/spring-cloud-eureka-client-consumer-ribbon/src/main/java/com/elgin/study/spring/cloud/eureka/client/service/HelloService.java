@@ -1,5 +1,6 @@
 package com.elgin.study.spring.cloud.eureka.client.service;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -15,9 +16,13 @@ public class HelloService {
         return restTemplate.getForObject("http://CLIENT-PROVIDER/home",String.class);
     }
 
-
+    @HystrixCommand(fallbackMethod = "hiError")
     public String hi(String name){
         return restTemplate.getForObject("http://CLIENT-PROVIDER/hi?name=" + name,String.class);
+    }
+
+    public String hiError(String name){
+        return "Hello " + name + "Sorry,error Response";
     }
 
 
