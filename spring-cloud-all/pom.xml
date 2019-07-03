@@ -12,7 +12,7 @@
 	<modules>
         <module>spring-cloud-eureka-peer1</module>
         <module>spring-cloud-eureka-peer2</module>
-        <module>spring-cloud-eureka-client</module>
+        <module>spring-cloud-eureka-client-provider-01</module>
     </modules>
 
 </project>

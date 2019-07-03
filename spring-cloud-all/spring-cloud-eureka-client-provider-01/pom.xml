@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.elgin.study.spring.cloud.eureka.client</groupId>
-    <artifactId>spring-cloud-eureka-client-provider</artifactId>
+    <artifactId>spring-cloud-eureka-client-provider-01</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-cloud-eureka-client</name>
+    <name>spring-cloud-eureka-client-provider-01</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
