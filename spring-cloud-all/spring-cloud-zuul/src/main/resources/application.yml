@@ -1,0 +1,21 @@
+server:
+  port: 8078
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:1111/eureka/,http://peer2:2222/eureka/
+
+spring:
+  application:
+    name: client-zuul
+
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: client-consumer-ribbon
+    api-b:
+      path: /api-b/**
+      serviceId: client-consumer-feign
+
