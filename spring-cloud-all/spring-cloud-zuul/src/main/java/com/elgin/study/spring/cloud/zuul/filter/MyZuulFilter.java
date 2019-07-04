@@ -65,6 +65,7 @@ public class MyZuulFilter extends ZuulFilter {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            return null;
         }
         log.info(">>>>>>>>  the token is ok ,token value is {}",token);
         return null;
