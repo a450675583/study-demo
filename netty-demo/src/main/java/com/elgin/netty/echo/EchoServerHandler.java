@@ -1,4 +1,4 @@
-package com.elgin.netty.discard;
+package com.elgin.netty.echo;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
@@ -16,7 +16,7 @@ import lombok.extern.slf4j.Slf4j;
  * 2020/10/9
  */
 @Slf4j
-public class DiscardServerHandler extends ChannelInboundHandlerAdapter {
+public class EchoServerHandler extends ChannelInboundHandlerAdapter {
 
 
     /**
@@ -29,13 +29,15 @@ public class DiscardServerHandler extends ChannelInboundHandlerAdapter {
      */
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg){
-        //丢弃
         ByteBuf in = (ByteBuf) msg;
         try{
-            log.info(in.toString(CharsetUtil.UTF_8));
+            //String www = in.toString(CharsetUtil.UTF_8);
+            log.info(ctx.channel().remoteAddress() + " -> Server :" + msg);
+            ctx.write(msg);
+            ctx.flush();
             // Do something with msg
         }finally {
-            ReferenceCountUtil.release(msg);
+            //ReferenceCountUtil.release(msg);
         }
     }
 

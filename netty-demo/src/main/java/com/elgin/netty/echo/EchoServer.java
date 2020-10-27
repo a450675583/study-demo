@@ -1,4 +1,4 @@
-package com.elgin.netty.discard;
+package com.elgin.netty.echo;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -8,16 +8,22 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import org.apache.commons.lang3.time.DateFormatUtils;
+import org.apache.commons.lang3.time.DateUtils;
+
+
+import java.text.ParseException;
+import java.util.Date;
 
 /**
  * @author zxs
  * 2020/10/9
  */
-public class DiscardServer {
+public class EchoServer {
 
     private int port;
 
-    public DiscardServer(int port){
+    public EchoServer(int port){
         this.port = port;
     }
 
@@ -28,12 +34,7 @@ public class DiscardServer {
             ServerBootstrap bootstrap = new ServerBootstrap();
             bootstrap.group(bossGroup,workGroup)
                     .channel(NioServerSocketChannel.class)
-                    .childHandler(new ChannelInitializer<SocketChannel>() {
-                        @Override
-                        protected void initChannel(SocketChannel socketChannel) throws Exception {
-                            socketChannel.pipeline().addLast(new DiscardServerHandler());
-                        }
-                    })
+                    .childHandler(new EchoServerHandler())
                     .option(ChannelOption.SO_BACKLOG,128)
                     .childOption(ChannelOption.SO_KEEPALIVE,true);
 
@@ -58,6 +59,6 @@ public class DiscardServer {
         } else {
             port = 8080;
         }
-        new DiscardServer(port).run();
+        new EchoServer(port).run();
     }
 }
