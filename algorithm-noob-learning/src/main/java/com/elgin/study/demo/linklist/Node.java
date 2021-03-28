@@ -6,15 +6,15 @@ import java.util.List;
  * @author zxs
  * 2020/12/24
  */
-public class Node<E> {
+public class Node {
 
-    E item;
-    Node<E> next;
+    public Integer item;
+    public Node next;
 
     public Node(){
 
     }
-    public Node(E element) {
+    public Node(Integer element) {
         this.item = element;
     }
 
@@ -26,7 +26,7 @@ public class Node<E> {
                 '}';
     }
 
-    public static Node createNode(List list){
+    public static Node createNode(List<Integer> list){
         Node head = new Node(list.get(0));
         if(list.size()<=1){
             return head;
