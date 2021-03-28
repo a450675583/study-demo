@@ -40,7 +40,7 @@ package com.elgin.study.demo.leetcode;
  * 链接：https://leetcode-cn.com/problems/maximum-subarray
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * 最大子序和
+ * 最大子序和   贪心算法  +  动态规划
  * @author zxs
  * 2021/3/27
  */
