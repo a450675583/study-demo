@@ -1,5 +1,9 @@
 package com.elgin.study.demo.leetcode.twoPoints;
 
+import com.google.common.collect.Lists;
+
+import java.util.Arrays;
+
 /**
  * ⭐️ 旋转数组
  * 给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。
@@ -25,7 +29,15 @@ package com.elgin.study.demo.leetcode.twoPoints;
 public class RotateArray {
 
     public static void main(String[] args) {
+        int[] array1 = {1,2,3,4,5,6,7};
+        rotateArray1(array1,3);
+        Arrays.stream(array1).forEach(x -> System.out.print(x));
 
+        System.out.println("");
+
+        int[] array2 = {1,2,3,4,5,6,7};
+        rotateArray2(array2,3);
+        Arrays.stream(array2).forEach(x -> System.out.print(x));
     }
 
     /**
@@ -41,7 +53,7 @@ public class RotateArray {
      * @param array
      * @param k
      */
-    private void rotateArray1(int[] array,int k){
+    private static void rotateArray1(int[] array,int k){
         int[] newArray = new int[array.length];
         int len = array.length;
         for (int i = 0; i < len; i++) {
@@ -66,7 +78,7 @@ public class RotateArray {
      * @param array
      * @param k
      */
-    private void rotateArray2(int[] array,int k){
+    private static void rotateArray2(int[] array,int k){
         int len = array.length;
         k = k % len;
         reverse(array,0,len-1);
@@ -74,7 +86,7 @@ public class RotateArray {
         reverse(array,k,len-1);
     }
 
-    private void reverse(int[] array,int start,int end){
+    private static void reverse(int[] array,int start,int end){
         while (start < end){
             int temp = array[start];
             array[start] = array[end];
