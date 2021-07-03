@@ -1,7 +1,5 @@
 package com.elgin.study.demo.leetcode.twoPoints;
 
-import com.google.common.collect.Lists;
-
 import java.util.Arrays;
 
 /**
