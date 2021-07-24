@@ -39,9 +39,9 @@ public class CheckBinarySearchTree {
     public static void main(String[] args) {
         TreeNode root = new TreeNode(5);
         TreeNode four = new TreeNode(4);
-        TreeNode six = new TreeNode(6);
-        TreeNode three = new TreeNode(3);
-        TreeNode seven = new TreeNode(7);
+        TreeNode six = new TreeNode(8);
+        TreeNode three = new TreeNode(6);
+        TreeNode seven = new TreeNode(9);
 
         root.left = four;
         root.right = six;
